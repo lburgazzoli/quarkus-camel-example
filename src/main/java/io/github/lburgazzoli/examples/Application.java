@@ -15,7 +15,7 @@ public class Application {
 
     @Inject
     CamelRuntime runtime;
-    
+
     void started(@Observes StartedEvent event) {
         LOGGER.info("my.property = {}", runtime.getContext().resolvePropertyPlaceholders("{{my.property}}"));
     }
